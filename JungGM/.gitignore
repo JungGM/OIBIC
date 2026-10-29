@@ -1,0 +1,12 @@
+_local/
+__pycache__/
+.venv/
+*.pyc
+*.parquet
+*.csv
+*.pkl
+*.joblib
+*.ubj
+*.zip
+*.log
+제출/*.json
