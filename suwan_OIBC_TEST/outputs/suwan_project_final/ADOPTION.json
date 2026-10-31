@@ -1,0 +1,11 @@
+{
+  "adopt_candidate": true,
+  "candidate_sha256": "b4bde78a1a54a5c0f375030d38674212a392170731174a6b76bf087f4a5f35b9",
+  "authority": "Explicit human user instruction in this conversation on 2026-10-31",
+  "user_instruction": "ㄴㄴ좋아졋으면그거로해",
+  "decision": "Adopt the already-frozen feature/grouping/scale candidate on observed improvement despite the failed predeclared bootstrap gate",
+  "stability_gate_passed": false,
+  "candidate_retuned_after_May": false,
+  "selection_warning": "The adoption decision used knowledge of May results. May is not an independent final test for this adoption decision.",
+  "production_fit_cutoff": "2025-05-31 17:00+09:00"
+}

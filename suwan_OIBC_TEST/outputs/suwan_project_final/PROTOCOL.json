@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "baseline": "frozen local 0.2 official_lgb + 0.4 lgb_l1 + 0.4 xgb_deep; compare also public 0.2/0.3/0.5",
+  "warning": "All development months have been inspected before; no untouched holdout claim",
+  "fit_correction": "2025 March operating days 1..20, base trained through Feb28 17:00",
+  "choose_candidate": "March operating days21..31 through31 17:00",
+  "correction": {"kinds":["none","bounded_scale","bounded_regularized_median_residual"],"alpha":[0.0001,0.001,0.01],"strength":[0.25,0.5,1],"residual_bound":"10% of base group forecast"},
+  "features": "18 issued forecast trajectory statistics; same xgb_deep settings and training rows; replace its 40% share, never refit other base components",
+  "feature_model_history": "24 months, one development fit and production fit only if accepted",
+  "direct_alternative": "Only if none of correction or features improves March selection; weather-only median regression alpha0.001",
+  "grouping": "selected site forecast March1..20 errors; 3 restarts x10000 steps; compare single proposal with reference on March21..31, refit correction per assignment",
+  "gate": "Freeze one candidate before April scoring. Require >=1% April penalty reduction vs frozen local baseline and positive90% paired-day and3-day circular-block bootstrap lower bounds, 2000 repetitions seed20261029",
+  "audit": "May report only; never retune from it; do not claim superiority on failure",
+  "production": "baseline through May31 17:00; feature model same cutoff if accepted; correction coefficients frozen from March, no actual test generation required",
+  "fallback": "Unchanged frozen local baseline if April gate fails",
+  "output": "composition253 and forecast17520; no official server upload"
+}

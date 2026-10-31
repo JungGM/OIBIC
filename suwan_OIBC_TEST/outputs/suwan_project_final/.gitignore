@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+submission/
+submission_reference/
+_local/

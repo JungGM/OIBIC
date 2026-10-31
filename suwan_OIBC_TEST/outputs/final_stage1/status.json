@@ -1,0 +1,9 @@
+{
+  "stage": "complete",
+  "complete": true,
+  "scope": "Fixed-reference-group baseline comparison; no new model fitting or calibration",
+  "raw_truth_matches": true,
+  "independent_development_scores_match": true,
+  "saved_model_prediction_max_abs_difference": 0.0,
+  "official_period_production": "Separate pre-existing reproduction, not needed for this comparison"
+}

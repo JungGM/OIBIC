@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checkpoint_count": 17,
+  "independent_scoring_matches": true,
+  "source_and_code_hashes_match": true,
+  "weights": {
+    "public_fixed": {
+      "official_lgb": 0.2,
+      "lgb_l1": 0.3,
+      "xgb_deep": 0.5
+    },
+    "local_selected": {
+      "official_lgb": 0.2,
+      "lgb_l2": 0.0,
+      "lgb_l2_wide": 0.0,
+      "lgb_l1": 0.4,
+      "lgb_recent": 0.0,
+      "xgb_regular": 0.0,
+      "xgb_deep": 0.4
+    }
+  },
+  "selection_objective": {
+    "local_selected": 0.9442036857758562,
+    "official_lgb": 1.0,
+    "public_fixed": 0.9445358688031955
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1"
+  }
+}
