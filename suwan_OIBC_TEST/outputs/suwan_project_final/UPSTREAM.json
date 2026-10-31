@@ -1,0 +1,86 @@
+{
+  "repo": "JungGM/OIBIC",
+  "commit": "73d269f69ce059cabbee1c4f68a2cb05ce4d1aac",
+  "files": [
+    {
+      "name": ".gitignore",
+      "blob_sha": "27f3c1769b519c081ffa4cd66953b03e15964719"
+    },
+    {
+      "name": "PAPER_METHOD.md",
+      "blob_sha": "bf041c6be7a3e84922f16c76e950cac95f987697"
+    },
+    {
+      "name": "README.md",
+      "blob_sha": "60bf4ef1321524bbe0d289295c7f2e2929a2cc76"
+    },
+    {
+      "name": "RESULTS.md",
+      "blob_sha": "52c5be6b3deb989d086004a419b3eaa12170d9dc"
+    },
+    {
+      "name": "RULES.md",
+      "blob_sha": "197667015a7b7f5dd1737b7e1fe6e8f454c88504"
+    },
+    {
+      "name": "audit_run.py",
+      "blob_sha": "8b937ce2120f840c341f17b005297e4b5017bc6c"
+    },
+    {
+      "name": "features.py",
+      "blob_sha": "16ace90032898dfd3bf345cbe61d881691c112e8"
+    },
+    {
+      "name": "grouping.py",
+      "blob_sha": "edfabd58e52f7efd7a77eb1f239817670a288c9e"
+    },
+    {
+      "name": "pipeline.py",
+      "blob_sha": "16c6b95e8c474eb354a16e53d0a7945af880dd92"
+    },
+    {
+      "name": "predict.py",
+      "blob_sha": "bef1211a49d23f5b2716077295063604ab5775e0"
+    },
+    {
+      "name": "report_results.py",
+      "blob_sha": "87f5ccbbc6ba6b598192bf73e2da920c05b1b6d2"
+    },
+    {
+      "name": "requirements.txt",
+      "blob_sha": "91456e12b56370c6ecda8bd4c6e9a534006cc460"
+    },
+    {
+      "name": "resume_production.py",
+      "blob_sha": "251709020564ac4701aebbec005dd42e6bd44f91"
+    },
+    {
+      "name": "test_features.py",
+      "blob_sha": "bd6950bbc1485ee686d144d475922b1e19be0c06"
+    },
+    {
+      "name": "test_grouping.py",
+      "blob_sha": "bd1099d11f7d416419abe5686c099f3e166ddd80"
+    },
+    {
+      "name": "test_pipeline.py",
+      "blob_sha": "d308123bafbb44828de0a8de83a24c839e1e198e"
+    },
+    {
+      "name": "test_validator.py",
+      "blob_sha": "77b53d00cb6ec236e86a6a2a62ce2e988d656540"
+    },
+    {
+      "name": "validate_submission.py",
+      "blob_sha": "fdb6e3d5c2b67a34a99ab2e1f7d5da82f58576c3"
+    },
+    {
+      "name": "verify_reproduction.py",
+      "blob_sha": "78c233a11e86bd94fc9332d2e765af06d78d7d94"
+    }
+  ],
+  "modifications": [
+    "CPU threads 6 to 2",
+    "resumable stage directories; runner checkpoints"
+  ]
+}
