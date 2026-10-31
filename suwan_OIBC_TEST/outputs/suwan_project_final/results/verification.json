@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "baseline_saved_model_reproduction": true,
+  "feature_saved_model_max_difference": 0.0,
+  "independent_May_candidate_penalty": 21393220.373229932,
+  "final_CSV_byte_identical_on_repeat": true,
+  "full_hour_grid": true,
+  "night_zero": true,
+  "source_unchanged": true,
+  "official_server_submission": false,
+  "group_capacity_kw": {
+    "G1": 20021.82,
+    "G2": 22633.55
+  },
+  "group_site_counts": {
+    "G1": 125,
+    "G2": 128
+  }
+}

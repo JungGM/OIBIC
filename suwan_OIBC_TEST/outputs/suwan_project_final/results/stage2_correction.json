@@ -1,0 +1,90 @@
+{
+  "selected": {
+    "kind": "scale",
+    "strength": 0.25,
+    "factors": [
+      1.0105131897717847,
+      1.0057225065964595
+    ]
+  },
+  "March_validation": [
+    {
+      "kind": "none",
+      "strength": 0.0,
+      "alpha": null,
+      "validation_penalty": 4855513.755061565
+    },
+    {
+      "kind": "scale",
+      "strength": 0.25,
+      "alpha": null,
+      "validation_penalty": 4851498.638184751
+    },
+    {
+      "kind": "scale",
+      "strength": 0.5,
+      "alpha": null,
+      "validation_penalty": 4851760.555987704
+    },
+    {
+      "kind": "scale",
+      "strength": 1.0,
+      "alpha": null,
+      "validation_penalty": 4854577.780597187
+    },
+    {
+      "kind": "residual",
+      "strength": 0.25,
+      "alpha": 0.0001,
+      "validation_penalty": 4887118.963163747
+    },
+    {
+      "kind": "residual",
+      "strength": 0.5,
+      "alpha": 0.0001,
+      "validation_penalty": 5055696.537733163
+    },
+    {
+      "kind": "residual",
+      "strength": 1.0,
+      "alpha": 0.0001,
+      "validation_penalty": 5612523.157357886
+    },
+    {
+      "kind": "residual",
+      "strength": 0.25,
+      "alpha": 0.001,
+      "validation_penalty": 4882498.830055689
+    },
+    {
+      "kind": "residual",
+      "strength": 0.5,
+      "alpha": 0.001,
+      "validation_penalty": 5077081.72364807
+    },
+    {
+      "kind": "residual",
+      "strength": 1.0,
+      "alpha": 0.001,
+      "validation_penalty": 5662463.101546619
+    },
+    {
+      "kind": "residual",
+      "strength": 0.25,
+      "alpha": 0.01,
+      "validation_penalty": 4905511.389708088
+    },
+    {
+      "kind": "residual",
+      "strength": 0.5,
+      "alpha": 0.01,
+      "validation_penalty": 4997685.972648451
+    },
+    {
+      "kind": "residual",
+      "strength": 1.0,
+      "alpha": 0.01,
+      "validation_penalty": 5335558.031366192
+    }
+  ]
+}
