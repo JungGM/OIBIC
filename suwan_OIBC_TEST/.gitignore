@@ -1,0 +1,19 @@
+data/
+runs/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.parquet
+*.npy
+*.npz
+*.zip
+
+# Final local experiment artifacts
+work/
+outputs/suwan_projectV2/
+outputs/suwan_project_final/submission/
+outputs/suwan_project_final/submission_reference/
+__pycache__/
+*.pyc
