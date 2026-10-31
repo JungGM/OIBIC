@@ -1,0 +1,30 @@
+{
+  "ensemble_weights": {
+    "official_lgb": 0.2,
+    "lgb_l1": 0.4,
+    "xgb_deep_143": 0.4
+  },
+  "group_site_counts": {
+    "G1": 125,
+    "G2": 128
+  },
+  "group_capacity_kw": {
+    "G1": 20021.82,
+    "G2": 22633.55
+  },
+  "group_changes": 133,
+  "correction": {
+    "kind": "scale",
+    "strength": 1.0,
+    "factors": [
+      1.0006168764813268,
+      1.0022457537484006
+    ]
+  },
+  "original_stability_gate_passed": false,
+  "user_adoption": true,
+  "production_fit_cutoff": "2025-05-31 17:00+09:00",
+  "feature_count": 143,
+  "training_rows": 1710304,
+  "feature_model_sha256": "cd97a7c4fbc650bfc14b1524d74b96ab171bbd49e532efc56c9f60d03871e77d"
+}

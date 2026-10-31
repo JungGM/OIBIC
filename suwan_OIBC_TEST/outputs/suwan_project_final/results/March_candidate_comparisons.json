@@ -1,0 +1,275 @@
+[
+  {
+    "variant": "base",
+    "selected": {
+      "kind": "scale",
+      "strength": 0.25,
+      "factors": [
+        1.0105131897717847,
+        1.0057225065964595
+      ]
+    },
+    "candidates": [
+      {
+        "kind": "none",
+        "strength": 0.0,
+        "alpha": null,
+        "validation_penalty": 4855513.755061565
+      },
+      {
+        "kind": "scale",
+        "strength": 0.25,
+        "alpha": null,
+        "validation_penalty": 4851498.638184751
+      },
+      {
+        "kind": "scale",
+        "strength": 0.5,
+        "alpha": null,
+        "validation_penalty": 4851760.555987704
+      },
+      {
+        "kind": "scale",
+        "strength": 1.0,
+        "alpha": null,
+        "validation_penalty": 4854577.780597187
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.0001,
+        "validation_penalty": 4887118.963163747
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.0001,
+        "validation_penalty": 5055696.537733163
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.0001,
+        "validation_penalty": 5612523.157357886
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.001,
+        "validation_penalty": 4882498.830055689
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.001,
+        "validation_penalty": 5077081.72364807
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.001,
+        "validation_penalty": 5662463.101546619
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.01,
+        "validation_penalty": 4905511.389708088
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.01,
+        "validation_penalty": 4997685.972648451
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.01,
+        "validation_penalty": 5335558.031366192
+      }
+    ]
+  },
+  {
+    "variant": "feature",
+    "selected": {
+      "kind": "scale",
+      "strength": 1.0,
+      "factors": [
+        1.006228653798222,
+        1.0059530152039038
+      ]
+    },
+    "candidates": [
+      {
+        "kind": "none",
+        "strength": 0.0,
+        "alpha": null,
+        "validation_penalty": 4860269.932052471
+      },
+      {
+        "kind": "scale",
+        "strength": 0.25,
+        "alpha": null,
+        "validation_penalty": 4852187.214546107
+      },
+      {
+        "kind": "scale",
+        "strength": 0.5,
+        "alpha": null,
+        "validation_penalty": 4845742.18966164
+      },
+      {
+        "kind": "scale",
+        "strength": 1.0,
+        "alpha": null,
+        "validation_penalty": 4836484.321326634
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.0001,
+        "validation_penalty": 4888065.823314874
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.0001,
+        "validation_penalty": 5067274.36226095
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.0001,
+        "validation_penalty": 5605097.464621726
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.001,
+        "validation_penalty": 4889243.475622333
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.001,
+        "validation_penalty": 5092555.576323096
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.001,
+        "validation_penalty": 5650883.543036015
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.01,
+        "validation_penalty": 4908050.281313927
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.01,
+        "validation_penalty": 5003386.0192943355
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.01,
+        "validation_penalty": 5346290.453575326
+      }
+    ]
+  },
+  {
+    "variant": "feature_group_proposal",
+    "selected": {
+      "kind": "scale",
+      "strength": 1.0,
+      "factors": [
+        1.0006168764813268,
+        1.0022457537484006
+      ]
+    },
+    "candidates": [
+      {
+        "kind": "none",
+        "strength": 0.0,
+        "alpha": null,
+        "validation_penalty": 4677281.845836903
+      },
+      {
+        "kind": "scale",
+        "strength": 0.25,
+        "alpha": null,
+        "validation_penalty": 4673461.851220129
+      },
+      {
+        "kind": "scale",
+        "strength": 0.5,
+        "alpha": null,
+        "validation_penalty": 4670593.279491412
+      },
+      {
+        "kind": "scale",
+        "strength": 1.0,
+        "alpha": null,
+        "validation_penalty": 4665697.851231666
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.0001,
+        "validation_penalty": 4714330.505255378
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.0001,
+        "validation_penalty": 4828449.720587639
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.0001,
+        "validation_penalty": 5223337.7012971705
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.001,
+        "validation_penalty": 4717312.848378432
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.001,
+        "validation_penalty": 4846609.910091434
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.001,
+        "validation_penalty": 5307191.880388008
+      },
+      {
+        "kind": "residual",
+        "strength": 0.25,
+        "alpha": 0.01,
+        "validation_penalty": 4722044.425274466
+      },
+      {
+        "kind": "residual",
+        "strength": 0.5,
+        "alpha": 0.01,
+        "validation_penalty": 4822814.651954508
+      },
+      {
+        "kind": "residual",
+        "strength": 1.0,
+        "alpha": 0.01,
+        "validation_penalty": 5162915.784550003
+      }
+    ]
+  }
+]

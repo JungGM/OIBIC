@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "accepted_improvement": true,
+  "forecast_rows": 17520,
+  "composition_rows": 253,
+  "hashes": {
+    "forecast.csv": "7bfa08a92353760ea4be8723a630993103022794821695623d100fe458be647a",
+    "composition.csv": "a8a99cfb52f47e3b29b1d8b64adf03a9e2731d529e640c68b7574baacc79a506"
+  },
+  "source_unchanged": true,
+  "official_server_submission": false,
+  "group_changes": 133,
+  "adoption": "explicit_user_override",
+  "passed_original_stability_gate": false,
+  "adoption_record_sha256": "24cf129df514887dbe1d9db76fc39de872de796b4c61c9d868007c05d89aea2b"
+}
