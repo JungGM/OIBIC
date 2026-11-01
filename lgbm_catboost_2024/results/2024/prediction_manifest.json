@@ -1,0 +1,39 @@
+{
+  "status": "sealed_and_format_validated",
+  "requested_hours": 8784,
+  "forecast_rows": 17568,
+  "composition_rows": 253,
+  "capacity_kw": {
+    "G1": 20465.655,
+    "G2": 22189.715
+  },
+  "train_start": "2022-01-01 01:00:00+09:00",
+  "train_end": "2023-12-31 17:00:00+09:00",
+  "training_rows": 1444607,
+  "training_sites": 148,
+  "unseen_forecast_sites": 105,
+  "forecast_start": "2024-01-01 01:00:00+09:00",
+  "forecast_end": "2025-01-01 00:00:00+09:00",
+  "blend_lightgbm_weight": 0.5,
+  "features": {
+    "lightgbm": 160,
+    "catboost": 160
+  },
+  "iterations": {
+    "lightgbm": 484,
+    "catboost": 600
+  },
+  "seconds": 257.0894317626953,
+  "truth_or_smp_read_during_prediction": false,
+  "official_score_computed": false,
+  "common_score_computed": false,
+  "frozen_config_sha256": "1c69bca3fc752fcc2e4d0aa3926df91b637853fea6f048f899c2fbce6f77ddfc",
+  "feature_engine_sha256": "30168cc877a64231ceee4967ac6c1bdc27cf47adf9cb820a4e5671785760bbf2",
+  "script_sha256": "2dabaef5b78ee6e846dd9f270ec57e99af61243166b2d3aba4910edfede436d7",
+  "model_sha256": {
+    "lightgbm": "f323481c53c3d44c39ca0bce0ea3fc58eb33ffb4991c9571b94812f883598e76",
+    "catboost": "6e387fc3cbabd0717e1df9bddea8406f2e2efb0598918e4b7a6d54afb78893c5"
+  },
+  "forecast_sha256": "5a5ca9dc75fc907696bb2055da4814af05a58924435455e5c09f0299c212864d",
+  "composition_sha256": "374a7e01adf59d0724741121ceea09d434416530358107a6f62931471331dcfd"
+}

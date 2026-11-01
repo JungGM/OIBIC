@@ -1,0 +1,16 @@
+{
+  "complete_hours": 178,
+  "requested_hours": 8784,
+  "penalty_krw": 2189990.90055895,
+  "settlement_krw": 107603178.79778975,
+  "by_group_penalty": {
+    "G1": 1041021.1518304208,
+    "G2": 1148969.748728529
+  },
+  "capacity_kw": {
+    "G1": 20465.655,
+    "G2": 22189.715
+  },
+  "forecast_sha256": "5a5ca9dc75fc907696bb2055da4814af05a58924435455e5c09f0299c212864d",
+  "limitation": "2024 complete fleet hours only, not annual or official score. Different groupings permitted; predictions must match their own composition."
+}

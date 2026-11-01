@@ -1,0 +1,18 @@
+{
+  "status": "local_common_scoring_complete",
+  "scorer": {
+    "repository": "JungGM/OIBC_test1",
+    "commit": "6db1354e5ee7fdd2f2be889a063f50d21d78caeb",
+    "path": "test\uae30\uc900/score_2024.py",
+    "sha256": "8bf226186edbb899de7206897a374f6a8f64a764ff46e522f5215af6b3cae958"
+  },
+  "score_sha256": "e0e0ce7f43902ced6347271ffb0febc9eba658c77098985c2f9fada1a29c29e9",
+  "forecast_sha256": "5a5ca9dc75fc907696bb2055da4814af05a58924435455e5c09f0299c212864d",
+  "composition_sha256": "374a7e01adf59d0724741121ceea09d434416530358107a6f62931471331dcfd",
+  "frozen_config_sha256": "1c69bca3fc752fcc2e4d0aa3926df91b637853fea6f048f899c2fbce6f77ddfc",
+  "predictions_unchanged_after_scoring": true,
+  "scorer_executions_this_step": 1,
+  "official_server_submitted": false,
+  "revenue_krw": 109793169.6983487,
+  "penalty_percent_of_revenue": 1.9946513126234005
+}

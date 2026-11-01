@@ -1,0 +1,169 @@
+{
+  "status": "holdout_evaluated_once_after_freeze",
+  "frozen_selection_sha256": "ff685ae64fe90a019a7c49ff7271d6e785b4a6d8c6c7143e9e1d08eafa9f2afc",
+  "selection": {
+    "variant": "lgb160_cat160",
+    "lightgbm_weight": 0.5,
+    "weighted_mae_cf": 0.06148010573845688,
+    "unseen_weighted_mae_cf": 0.0659829399594936,
+    "partial_group_weighted_absolute_error": 385961230.45249563
+  },
+  "rows": 293146,
+  "sites": 148,
+  "holdout_start": "2023-10-01 01:00:00+09:00",
+  "holdout_end": "2023-12-31 17:00:00+09:00",
+  "official_score": false,
+  "truth_2024_used": false,
+  "metrics": {
+    "lightgbm": {
+      "rows": 293146,
+      "sites": 148,
+      "mae_cf": 0.028022365247968032,
+      "mae_kwh": 4.396826331623474,
+      "weighted_mae_cf": 0.051799260180392,
+      "bias_kwh": 1.1249480789000332,
+      "site_penalty_proxy_krw": 41289963.71490407,
+      "partial_group_weighted_absolute_error": 78319231.2653294,
+      "breakdown": {
+        "seen": {
+          "rows": 176080,
+          "sites": 80,
+          "mae_cf": 0.0270015332620648,
+          "mae_kwh": 2.146821427807791,
+          "weighted_mae_cf": 0.04492676169805502,
+          "bias_kwh": 0.34124110307996813,
+          "site_penalty_proxy_krw": 12021725.156841036
+        },
+        "unseen": {
+          "rows": 117066,
+          "sites": 68,
+          "mae_cf": 0.02955780761447787,
+          "mae_kwh": 7.781078492488845,
+          "weighted_mae_cf": 0.0552721108480782,
+          "bias_kwh": 2.303728632625257,
+          "site_penalty_proxy_krw": 29268238.558063038
+        },
+        "daylight": {
+          "rows": 139013,
+          "sites": 148,
+          "mae_cf": 0.05907906103579675,
+          "mae_kwh": 9.269625903908741,
+          "weighted_mae_cf": 0.0779361403072862,
+          "bias_kwh": 2.3717192072460156,
+          "site_penalty_proxy_krw": 41285482.45630875
+        },
+        "peak_11_15": {
+          "rows": 61296,
+          "sites": 148,
+          "mae_cf": 0.08760613038513998,
+          "mae_kwh": 14.127150775176533,
+          "weighted_mae_cf": 0.09480019770555226,
+          "bias_kwh": 4.470403710296569,
+          "site_penalty_proxy_krw": 35276412.51286153
+        }
+      }
+    },
+    "catboost": {
+      "rows": 293146,
+      "sites": 148,
+      "mae_cf": 0.028145383406210825,
+      "mae_kwh": 4.318144032420981,
+      "weighted_mae_cf": 0.05061589430240306,
+      "bias_kwh": 0.9652099246127891,
+      "site_penalty_proxy_krw": 40346685.104486495,
+      "partial_group_weighted_absolute_error": 78777682.6705059,
+      "breakdown": {
+        "seen": {
+          "rows": 176080,
+          "sites": 80,
+          "mae_cf": 0.02778832561979419,
+          "mae_kwh": 2.2000375788671636,
+          "weighted_mae_cf": 0.04561600864136204,
+          "bias_kwh": 0.4059315829924198,
+          "site_penalty_proxy_krw": 12206157.263773605
+        },
+        "unseen": {
+          "rows": 117066,
+          "sites": 68,
+          "mae_cf": 0.028682437162487123,
+          "mae_kwh": 7.504006574420844,
+          "weighted_mae_cf": 0.053142466057521716,
+          "bias_kwh": 1.8064253961631511,
+          "site_penalty_proxy_krw": 28140527.84071289
+        },
+        "daylight": {
+          "rows": 139013,
+          "sites": 148,
+          "mae_cf": 0.059210997336092,
+          "mae_kwh": 9.085568511562625,
+          "weighted_mae_cf": 0.07609391048762998,
+          "bias_kwh": 2.016635260927571,
+          "site_penalty_proxy_krw": 40309589.28787589
+        },
+        "peak_11_15": {
+          "rows": 61296,
+          "sites": 148,
+          "mae_cf": 0.08730534678944142,
+          "mae_kwh": 13.786480834190487,
+          "weighted_mae_cf": 0.09239419777212808,
+          "bias_kwh": 4.0725078486694315,
+          "site_penalty_proxy_krw": 34381107.985955276
+        }
+      }
+    },
+    "selected_blend": {
+      "rows": 293146,
+      "sites": 148,
+      "mae_cf": 0.027674380320608857,
+      "mae_kwh": 4.3032272811941725,
+      "weighted_mae_cf": 0.05064626305556167,
+      "bias_kwh": 1.0450790017564113,
+      "site_penalty_proxy_krw": 40370892.49107114,
+      "partial_group_weighted_absolute_error": 77834261.23782516,
+      "breakdown": {
+        "seen": {
+          "rows": 176080,
+          "sites": 80,
+          "mae_cf": 0.026981409615358137,
+          "mae_kwh": 2.138253358697265,
+          "weighted_mae_cf": 0.04462741091316017,
+          "bias_kwh": 0.3735863430361939,
+          "site_penalty_proxy_krw": 11941623.392870668
+        },
+        "unseen": {
+          "rows": 117066,
+          "sites": 68,
+          "mae_cf": 0.02871668365189674,
+          "mae_kwh": 7.559583595352471,
+          "weighted_mae_cf": 0.05368774447455413,
+          "bias_kwh": 2.0550770143942043,
+          "site_penalty_proxy_krw": 28429269.098200478
+        },
+        "daylight": {
+          "rows": 139013,
+          "sites": 148,
+          "mae_cf": 0.058282357207148534,
+          "mae_kwh": 9.063405153332885,
+          "weighted_mae_cf": 0.07617109599999307,
+          "bias_kwh": 2.1941772340867938,
+          "site_penalty_proxy_krw": 40350477.13661954
+        },
+        "peak_11_15": {
+          "rows": 61296,
+          "sites": 148,
+          "mae_cf": 0.08646988760847088,
+          "mae_kwh": 13.825885703110522,
+          "weighted_mae_cf": 0.09269474060213595,
+          "bias_kwh": 4.271455779483,
+          "site_penalty_proxy_krw": 34492943.96420999
+        }
+      }
+    }
+  },
+  "cohort": {
+    "cohort_sites": 80,
+    "complete_hours": 2201,
+    "group_hours": 4402,
+    "official_full_fleet_score": false
+  }
+}
