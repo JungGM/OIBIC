@@ -1,0 +1,29 @@
+{
+  "seed": 20261101,
+  "threads": 4,
+  "timezone": "Asia/Seoul",
+  "train_start": "2022-01-01 01:00:00+09:00",
+  "train_end": "2023-12-31 17:00:00+09:00",
+  "development_train_end": "2022-12-31 17:00:00+09:00",
+  "development_start": "2023-01-01 01:00:00+09:00",
+  "development_end": "2023-09-30 17:00:00+09:00",
+  "holdout_start": "2023-10-01 01:00:00+09:00",
+  "holdout_end": "2023-12-31 17:00:00+09:00",
+  "selection_cutoff": "2023-09-30 17:00:00+09:00",
+  "forecast_start": "2024-01-01 01:00:00+09:00",
+  "forecast_end": "2025-01-01 00:00:00+09:00",
+  "expected_forecast_rows": 17568,
+  "expected_sites": 253,
+  "minimum_group_capacity_kw": 20000,
+  "reference_groups": {
+    "A": "G1",
+    "B": "G2"
+  },
+  "models": [
+    "lightgbm",
+    "catboost"
+  ],
+  "candidate_features": 160,
+  "loss": "capacity_smp_time_weighted_absolute_error",
+  "actual_2024_for_selection": false
+}

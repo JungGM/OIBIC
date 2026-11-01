@@ -1,0 +1,980 @@
+{
+  "status": "design_only_not_trained_or_feature_engine_implemented",
+  "count": 160,
+  "base_count": 104,
+  "added_count": 56,
+  "rules": [
+    "D is the physical target day: endpoints D 01:00 through D+1 00:00 KST.",
+    "Both rounds are issued no later than D-1 17:00 KST. Freeze this issue bundle.",
+    "For canonical mappings see official README: humidity maps wa_humidity/wb_rel_hum.",
+    "Forecast NaNs remain NaN. No zero-fill of missing weather or missing truth.",
+    "For centered windows require all three contiguous slots inside the same target-day issue bundle; otherwise derived statistic is NaN.",
+    "For day aggregates require complete source fields and q; otherwise aggregate is NaN. No skipping absent timestamps in step differences.",
+    "Six-hour windows do not borrow later-issued neighboring-day forecasts. Incomplete windows are NaN.",
+    "Negative invalid rain, snow and wind become NaN before proxy construction. No simulated snowpack or true module temperature is claimed.",
+    "No test-period global moments, actual target SMP/weather, raw coordinates, site ID or current group as features.",
+    "Both models receive the same 160 columns; station identifiers are categorical; model-internal encoding dimensions are not additional features."
+  ],
+  "features": [
+    {
+      "name": "a10_cloud",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_humidity",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_ground_press",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_wind_speed",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_wind_sin",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_wind_cos",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_rain",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a10_snow",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_cloud",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_humidity",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_ground_press",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_wind_speed",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_wind_sin",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_wind_cos",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_rain",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a17_snow",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_feel_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_wet_bulb_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_dew_point",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_wind_speed",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_wind_sin",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_wind_cos",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_wind_gust_spd",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_rel_hum",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_vis",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_ceiling",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_uv_idx",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_precip_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_rain_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_snow_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_ice_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_total_liq",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_rain",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_snow",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_ice",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b10_cloud",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_feel_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_wet_bulb_temp",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_dew_point",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_wind_speed",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_wind_sin",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_wind_cos",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_wind_gust_spd",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_rel_hum",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_vis",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_ceiling",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_uv_idx",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_precip_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_rain_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_snow_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_ice_prob",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_total_liq",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_rain",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_snow",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_ice",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "b17_cloud",
+      "group": "weather",
+      "formula": "unit-normalized forecast; wind direction encoded as sin/cos",
+      "status": "base"
+    },
+    {
+      "name": "a_revision_cloud",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "a_revision_temp",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "a_revision_humidity",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "a_revision_wind_speed",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "a_revision_rain",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "a_revision_snow",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "b_revision_cloud",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "b_revision_temp",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "b_revision_humidity",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "b_revision_wind_speed",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "b_revision_rain",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "b_revision_snow",
+      "group": "differences",
+      "formula": "17h minus 10h; humidity maps B rel_hum; snow depth unit mm, not SWE",
+      "status": "base"
+    },
+    {
+      "name": "ab17_diff_cloud",
+      "group": "differences",
+      "formula": "A17 minus B17 in compatible units",
+      "status": "base"
+    },
+    {
+      "name": "ab17_diff_temp",
+      "group": "differences",
+      "formula": "A17 minus B17 in compatible units",
+      "status": "base"
+    },
+    {
+      "name": "ab17_diff_humidity",
+      "group": "differences",
+      "formula": "A17 minus B17 in compatible units",
+      "status": "base"
+    },
+    {
+      "name": "ab17_diff_wind_speed",
+      "group": "differences",
+      "formula": "A17 minus B17 in compatible units",
+      "status": "base"
+    },
+    {
+      "name": "solar_q",
+      "group": "solar_time",
+      "formula": "mean(max(sin(solar_altitude),0)) over ending-hour interval",
+      "status": "base"
+    },
+    {
+      "name": "solar_mid_altitude",
+      "group": "solar_time",
+      "formula": "solar altitude at interval midpoint",
+      "status": "base"
+    },
+    {
+      "name": "solar_azimuth_sin",
+      "group": "solar_time",
+      "formula": "sin(midpoint solar azimuth)",
+      "status": "base"
+    },
+    {
+      "name": "solar_azimuth_cos",
+      "group": "solar_time",
+      "formula": "cos(midpoint solar azimuth)",
+      "status": "base"
+    },
+    {
+      "name": "daylight_fraction",
+      "group": "solar_time",
+      "formula": "fraction of interval with sun above horizon",
+      "status": "base"
+    },
+    {
+      "name": "hour_sin",
+      "group": "solar_time",
+      "formula": "sin(2*pi*midpoint_hour/24)",
+      "status": "base"
+    },
+    {
+      "name": "hour_cos",
+      "group": "solar_time",
+      "formula": "cos(2*pi*midpoint_hour/24)",
+      "status": "base"
+    },
+    {
+      "name": "year_sin",
+      "group": "solar_time",
+      "formula": "sin(2*pi*(dayofyear-1)/days_in_year)",
+      "status": "base"
+    },
+    {
+      "name": "year_cos",
+      "group": "solar_time",
+      "formula": "cos(2*pi*(dayofyear-1)/days_in_year)",
+      "status": "base"
+    },
+    {
+      "name": "day_length",
+      "group": "solar_time",
+      "formula": "astronomical day length in hours",
+      "status": "base"
+    },
+    {
+      "name": "a17_q_cloud",
+      "group": "interactions",
+      "formula": "q*(1-cloud/100) if cloud, else q*cloud",
+      "status": "base"
+    },
+    {
+      "name": "a17_q_temp",
+      "group": "interactions",
+      "formula": "q*(1-cloud/100) if cloud, else q*temp",
+      "status": "base"
+    },
+    {
+      "name": "a17_q_humidity",
+      "group": "interactions",
+      "formula": "q*(1-cloud/100) if cloud, else q*humidity",
+      "status": "base"
+    },
+    {
+      "name": "b17_q_cloud",
+      "group": "interactions",
+      "formula": "q*(1-cloud/100) if cloud, else q*cloud",
+      "status": "base"
+    },
+    {
+      "name": "b17_q_temp",
+      "group": "interactions",
+      "formula": "q*(1-cloud/100) if cloud, else q*temp",
+      "status": "base"
+    },
+    {
+      "name": "b17_q_humidity",
+      "group": "interactions",
+      "formula": "q*(1-cloud/100) if cloud, else q*humidity",
+      "status": "base"
+    },
+    {
+      "name": "b17_dewpoint_depression",
+      "group": "interactions",
+      "formula": "temp-dew_point",
+      "status": "base"
+    },
+    {
+      "name": "b17_gust_excess",
+      "group": "interactions",
+      "formula": "wind_gust_spd-wind_speed in m/s",
+      "status": "base"
+    },
+    {
+      "name": "capacity_kw",
+      "group": "metadata",
+      "formula": "provided metadata; log_capacity=log(capacity_kw); station is categorical",
+      "status": "base"
+    },
+    {
+      "name": "log_capacity",
+      "group": "metadata",
+      "formula": "provided metadata; log_capacity=log(capacity_kw); station is categorical",
+      "status": "base"
+    },
+    {
+      "name": "wa_station",
+      "group": "metadata",
+      "formula": "provided metadata; log_capacity=log(capacity_kw); station is categorical",
+      "status": "base"
+    },
+    {
+      "name": "wb_station",
+      "group": "metadata",
+      "formula": "provided metadata; log_capacity=log(capacity_kw); station is categorical",
+      "status": "base"
+    },
+    {
+      "name": "wa_dist",
+      "group": "metadata",
+      "formula": "provided metadata; log_capacity=log(capacity_kw); station is categorical",
+      "status": "base"
+    },
+    {
+      "name": "wb_dist",
+      "group": "metadata",
+      "formula": "provided metadata; log_capacity=log(capacity_kw); station is categorical",
+      "status": "base"
+    },
+    {
+      "name": "a10_available",
+      "group": "availability",
+      "formula": "forecast key exists, independently of variable-level nulls",
+      "status": "base"
+    },
+    {
+      "name": "a17_available",
+      "group": "availability",
+      "formula": "forecast key exists, independently of variable-level nulls",
+      "status": "base"
+    },
+    {
+      "name": "b10_available",
+      "group": "availability",
+      "formula": "forecast key exists, independently of variable-level nulls",
+      "status": "base"
+    },
+    {
+      "name": "b17_available",
+      "group": "availability",
+      "formula": "forecast key exists, independently of variable-level nulls",
+      "status": "base"
+    },
+    {
+      "name": "b17_cloud_lagdiff",
+      "group": "add_temporal",
+      "formula": "v[t]-v[t-1]",
+      "status": "added"
+    },
+    {
+      "name": "b17_cloud_leaddiff",
+      "group": "add_temporal",
+      "formula": "v[t+1]-v[t]",
+      "status": "added"
+    },
+    {
+      "name": "b17_cloud_mean3",
+      "group": "add_temporal",
+      "formula": "mean(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_cloud_std3",
+      "group": "add_temporal",
+      "formula": "population_std(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_cloud_range3",
+      "group": "add_temporal",
+      "formula": "max(v[t-1:t+1])-min(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_temp_lagdiff",
+      "group": "add_temporal",
+      "formula": "v[t]-v[t-1]",
+      "status": "added"
+    },
+    {
+      "name": "b17_temp_leaddiff",
+      "group": "add_temporal",
+      "formula": "v[t+1]-v[t]",
+      "status": "added"
+    },
+    {
+      "name": "b17_temp_mean3",
+      "group": "add_temporal",
+      "formula": "mean(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_temp_std3",
+      "group": "add_temporal",
+      "formula": "population_std(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_temp_range3",
+      "group": "add_temporal",
+      "formula": "max(v[t-1:t+1])-min(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_uv_idx_lagdiff",
+      "group": "add_temporal",
+      "formula": "v[t]-v[t-1]",
+      "status": "added"
+    },
+    {
+      "name": "b17_uv_idx_leaddiff",
+      "group": "add_temporal",
+      "formula": "v[t+1]-v[t]",
+      "status": "added"
+    },
+    {
+      "name": "b17_uv_idx_mean3",
+      "group": "add_temporal",
+      "formula": "mean(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_uv_idx_std3",
+      "group": "add_temporal",
+      "formula": "population_std(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_uv_idx_range3",
+      "group": "add_temporal",
+      "formula": "max(v[t-1:t+1])-min(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_wind_speed_lagdiff",
+      "group": "add_temporal",
+      "formula": "v[t]-v[t-1]",
+      "status": "added"
+    },
+    {
+      "name": "b17_wind_speed_leaddiff",
+      "group": "add_temporal",
+      "formula": "v[t+1]-v[t]",
+      "status": "added"
+    },
+    {
+      "name": "b17_wind_speed_mean3",
+      "group": "add_temporal",
+      "formula": "mean(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_wind_speed_std3",
+      "group": "add_temporal",
+      "formula": "population_std(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "b17_wind_speed_range3",
+      "group": "add_temporal",
+      "formula": "max(v[t-1:t+1])-min(v[t-1:t+1])",
+      "status": "added"
+    },
+    {
+      "name": "a17_day_cloud_qmean",
+      "group": "add_day_context",
+      "formula": "sum(q*cloud)/sum(q) over complete physical target day",
+      "status": "added"
+    },
+    {
+      "name": "a17_day_cloud_qstd",
+      "group": "add_day_context",
+      "formula": "sqrt(sum(q*(cloud-qmean)^2)/sum(q))",
+      "status": "added"
+    },
+    {
+      "name": "a17_day_cloud_maxstep",
+      "group": "add_day_context",
+      "formula": "max(abs(cloud[t]-cloud[t-1])) for adjacent complete hourly pairs within target day",
+      "status": "added"
+    },
+    {
+      "name": "a17_day_rain_total",
+      "group": "add_day_context",
+      "formula": "sum(hourly rain) over complete physical target day; missing is not zero",
+      "status": "added"
+    },
+    {
+      "name": "b17_day_cloud_qmean",
+      "group": "add_day_context",
+      "formula": "sum(q*cloud)/sum(q) over complete physical target day",
+      "status": "added"
+    },
+    {
+      "name": "b17_day_cloud_qstd",
+      "group": "add_day_context",
+      "formula": "sqrt(sum(q*(cloud-qmean)^2)/sum(q))",
+      "status": "added"
+    },
+    {
+      "name": "b17_day_cloud_maxstep",
+      "group": "add_day_context",
+      "formula": "max(abs(cloud[t]-cloud[t-1])) for adjacent complete hourly pairs within target day",
+      "status": "added"
+    },
+    {
+      "name": "b17_day_rain_total",
+      "group": "add_day_context",
+      "formula": "sum(hourly rain) over complete physical target day; missing is not zero",
+      "status": "added"
+    },
+    {
+      "name": "ab17_absdiff_cloud",
+      "group": "add_uncertainty",
+      "formula": "abs(A17-B17)",
+      "status": "added"
+    },
+    {
+      "name": "ab_round_std_cloud",
+      "group": "add_uncertainty",
+      "formula": "population_std(A10,A17,B10,B17), require >=2 valid values; model disagreement, not calibrated uncertainty",
+      "status": "added"
+    },
+    {
+      "name": "ab17_absdiff_temp",
+      "group": "add_uncertainty",
+      "formula": "abs(A17-B17)",
+      "status": "added"
+    },
+    {
+      "name": "ab_round_std_temp",
+      "group": "add_uncertainty",
+      "formula": "population_std(A10,A17,B10,B17), require >=2 valid values; model disagreement, not calibrated uncertainty",
+      "status": "added"
+    },
+    {
+      "name": "ab17_absdiff_humidity",
+      "group": "add_uncertainty",
+      "formula": "abs(A17-B17)",
+      "status": "added"
+    },
+    {
+      "name": "ab_round_std_humidity",
+      "group": "add_uncertainty",
+      "formula": "population_std(A10,A17,B10,B17), require >=2 valid values; model disagreement, not calibrated uncertainty",
+      "status": "added"
+    },
+    {
+      "name": "ab17_absdiff_wind_speed",
+      "group": "add_uncertainty",
+      "formula": "abs(A17-B17)",
+      "status": "added"
+    },
+    {
+      "name": "ab_round_std_wind_speed",
+      "group": "add_uncertainty",
+      "formula": "population_std(A10,A17,B10,B17), require >=2 valid values; model disagreement, not calibrated uncertainty",
+      "status": "added"
+    },
+    {
+      "name": "toa_horizontal",
+      "group": "add_physics",
+      "formula": "mean(I0(day)*max(sin(alpha),0)) over interval; extraterrestrial, not surface irradiance",
+      "status": "added"
+    },
+    {
+      "name": "q_squared",
+      "group": "add_physics",
+      "formula": "q^2",
+      "status": "added"
+    },
+    {
+      "name": "q_cubed",
+      "group": "add_physics",
+      "formula": "q^3",
+      "status": "added"
+    },
+    {
+      "name": "relative_airmass",
+      "group": "add_physics",
+      "formula": "Kasten-Young relative airmass at midpoint; NaN below horizon",
+      "status": "added"
+    },
+    {
+      "name": "a17_q_wind",
+      "group": "add_physics",
+      "formula": "q*A17_wind_speed_mps",
+      "status": "added"
+    },
+    {
+      "name": "b17_q_wind",
+      "group": "add_physics",
+      "formula": "q*B17_wind_speed_mps",
+      "status": "added"
+    },
+    {
+      "name": "a17_heat_wind_proxy",
+      "group": "add_physics",
+      "formula": "q*max(A17_temp-25,0)/(1+A17_wind_speed_mps)",
+      "status": "added"
+    },
+    {
+      "name": "b17_heat_wind_proxy",
+      "group": "add_physics",
+      "formula": "q*max(B17_temp-25,0)/(1+B17_wind_speed_mps)",
+      "status": "added"
+    },
+    {
+      "name": "a17_snow6",
+      "group": "add_snow_risk",
+      "formula": "sum(hourly snow[t-5:t]) in mm snow depth, require 6 hours within frozen target-day bundle",
+      "status": "added"
+    },
+    {
+      "name": "a17_cold_snow6",
+      "group": "add_snow_risk",
+      "formula": "sum(snow*indicator(temp<=0))[t-5:t], require complete 6-hour snow and temperature",
+      "status": "added"
+    },
+    {
+      "name": "a17_thaw_degree_hours6",
+      "group": "add_snow_risk",
+      "formula": "sum(max(temp,0))[t-5:t], require complete 6-hour temperature",
+      "status": "added"
+    },
+    {
+      "name": "a17_wet_freezing_hours6",
+      "group": "add_snow_risk",
+      "formula": "sum(indicator(temp<=0 and (rain>0 or snow>0)))[t-5:t], require complete temperature, rain, snow",
+      "status": "added"
+    },
+    {
+      "name": "b17_snow6",
+      "group": "add_snow_risk",
+      "formula": "sum(hourly snow[t-5:t]) in mm snow depth, require 6 hours within frozen target-day bundle",
+      "status": "added"
+    },
+    {
+      "name": "b17_cold_snow6",
+      "group": "add_snow_risk",
+      "formula": "sum(snow*indicator(temp<=0))[t-5:t], require complete 6-hour snow and temperature",
+      "status": "added"
+    },
+    {
+      "name": "b17_thaw_degree_hours6",
+      "group": "add_snow_risk",
+      "formula": "sum(max(temp,0))[t-5:t], require complete 6-hour temperature",
+      "status": "added"
+    },
+    {
+      "name": "b17_wet_freezing_hours6",
+      "group": "add_snow_risk",
+      "formula": "sum(indicator(temp<=0 and (rain>0 or snow>0)))[t-5:t], require complete temperature, rain, snow",
+      "status": "added"
+    },
+    {
+      "name": "a17_day_coverage",
+      "group": "add_quality",
+      "formula": "valid canonical weather cells / (24*canonical variable count), within target day",
+      "status": "added"
+    },
+    {
+      "name": "a17_context3_coverage",
+      "group": "add_quality",
+      "formula": "valid cells / (3*canonical variable count), slots t-1,t,t+1; outside frozen target day counts unavailable",
+      "status": "added"
+    },
+    {
+      "name": "b17_day_coverage",
+      "group": "add_quality",
+      "formula": "valid canonical weather cells / (24*canonical variable count), within target day",
+      "status": "added"
+    },
+    {
+      "name": "b17_context3_coverage",
+      "group": "add_quality",
+      "formula": "valid cells / (3*canonical variable count), slots t-1,t,t+1; outside frozen target day counts unavailable",
+      "status": "added"
+    }
+  ]
+}
