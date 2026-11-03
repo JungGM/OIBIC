@@ -3,9 +3,9 @@
     "2026-11-02",
     "2026-11-03"
   ],
-  "decision": "candidate_prepared_pending_official_evaluation",
+  "decision": "improved_v8_officially_scored_team_best",
   "official_score_20261102": 6441109123,
-  "new_server_submission": false,
+  "new_server_submission": true,
   "new_production_csv": true,
   "production_candidates": [
     "improved_v7",
@@ -299,8 +299,30 @@
   "verified_production_models": 2,
   "limits": [
     "Repeated historical research, not untouched holdout or multiplicity-adjusted confidence",
-    "No new official score or rank verification",
     "July-Dec selection uses fixed 225-site complete proxy; Jan-May comparisons use 253-site complete rows",
     "Public teammate methods retrained at matched cutoffs; actual official teammate model binaries not verified"
-  ]
+  ],
+  "official_evaluation": {
+    "candidate": "improved_v8",
+    "submission_number": 5,
+    "submitted_at_kst": "2026-11-03T22:32:35+09:00",
+    "submitter": "정기명",
+    "status": "scored",
+    "source_url": "https://dataen.ai/challenge/2026",
+    "daily_submissions_used": 2,
+    "total_submissions_used": 5,
+    "files": {
+      "composition.csv": "374a7e01adf59d0724741121ceea09d434416530358107a6f62931471331dcfd",
+      "forecast.csv": "35ff71e0be27abfe628edc6aea5ec125b5925a805920b5ff626f8fe7ccc68376"
+    },
+    "score_krw": 6445773032,
+    "total_submissions_remaining": 15,
+    "daily_submissions_remaining": 1,
+    "undergraduate_rank": 142,
+    "previous_team_best_krw": 6445688438,
+    "previous_own_score_krw": 6441109123,
+    "gain_vs_previous_team_best_krw": 84594,
+    "gain_vs_previous_own_krw": 4663909,
+    "leaderboard_updated_at_kst": "2026-11-03T22:33:51+09:00"
+  }
 }
