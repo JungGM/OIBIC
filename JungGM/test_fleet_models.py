@@ -8,9 +8,23 @@ import pipeline as p
 import tempfile
 from pathlib import Path
 from submission_guard import ensure_writable
+import spatial_forecasts as spatial
 
 
 class FleetContracts(unittest.TestCase):
+    def test_neighbor_graph_counts_weather_stations_once(self):
+        s=pd.DataFrame({'lat':[35.,35.01,35.02,35.03], 'lon':[127.,127.01,127.02,127.03],
+                        'wb_station':['B1','B1','B2','B3']})
+        w=spatial.weights(s,'wb_station',2)
+        np.testing.assert_allclose(w.sum(axis=1),1)
+        self.assertEqual(float(w[0,:2].sum()),0)
+        self.assertEqual(int(np.count_nonzero(w[2,:2])),1)
+    def test_neighbor_missing_forecast_is_not_treated_as_zero(self):
+        x=np.array([[np.nan,10.,30.]])
+        w=np.array([[.5,.5,0.]])
+        mean,std=spatial.moments(x,w)
+        self.assertEqual(float(mean[0,0]),10.)
+        self.assertEqual(float(std[0,0]),0.)
     def test_official_artifacts_cannot_be_overwritten(self):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder);ensure_writable(path)

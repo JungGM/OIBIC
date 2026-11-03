@@ -10,7 +10,7 @@ import team_pair_experiment as team
 from validate_submission import validate
 
 ROOTS={'v11':'solar_normalized_v11','v12':'site_regression_v12',
-       'v13':'catboost_rmse_v13','v14':'weather_augmented_v14','v17':'catboost_solar_v17'}
+       'v13':'catboost_rmse_v13','v14':'weather_augmented_v14','v17':'catboost_solar_v17','v18':'spatial_v18'}
 
 
 def audit(data,label,production=False):
@@ -85,6 +85,9 @@ def audit(data,label,production=False):
         if label=='v14':
             import weather_augmented
             weather_augmented.configure(data);meta,names,categories=engine.inputs(data)
+        if label=='v18':
+            import spatial_expert
+            spatial_expert.configure(data,True);meta,names,categories=engine.inputs(data)
         if label in ['v13','v17']:
             from catboost import CatBoostRegressor
             model=engine.CatPredictor(CatBoostRegressor().load_model(str(root/'production/model.cbm')))
@@ -93,7 +96,7 @@ def audit(data,label,production=False):
         for sid in [meta.index[0],meta.index[len(meta)//2],meta.index[-1]]:
             x=pd.read_parquet(team.RUN/'cache/test'/f'{sid}.parquet').iloc[::37].copy()
             x=engine.design(x,sid,meta,categories)
-            norm=np.maximum(x.solar_q.to_numpy(),.15) if label in ['v11','v14','v17'] else np.ones(len(x))
+            norm=np.maximum(x.solar_q.to_numpy(),.15) if label in ['v11','v14','v17','v18'] else np.ones(len(x))
             check=np.where(x.solar_q>0,np.maximum(model.predict(x[names],num_threads=4),0)*norm*float(meta.loc[sid,'capacity_kw']),0)
             saved=new[new.site_id==sid].set_index('ts')['new'].reindex(x.ts).to_numpy()
             differences.append(float(np.max(abs(check-saved))))
