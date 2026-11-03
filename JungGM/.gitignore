@@ -7,6 +7,10 @@ __pycache__/
 *.pkl
 *.joblib
 *.ubj
+*.cbm
+*.quantized
 *.zip
 *.log
 제출/*.json
+제출/**
+!제출/README.md
