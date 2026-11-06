@@ -1,0 +1,32 @@
+{
+  "valid": true,
+  "plants": 253,
+  "forecast_rows": 17520,
+  "site_rows": 2216280,
+  "nighttime_site_rows_verified_zero": 1103764,
+  "group_capacity_kw": {
+    "G1": 20465.655,
+    "G2": 22189.715
+  },
+  "first": "2025-06-01 01:00:00+09:00",
+  "last": "2026-06-01 00:00:00+09:00",
+  "independent_reaggregation_max_difference_kwh": {
+    "G1": 1.8189894035458565e-12,
+    "G2": 1.8189894035458565e-12
+  },
+  "choice": "group_aligned",
+  "blend": [
+    0.5,
+    0.5
+  ],
+  "official_score_known": false,
+  "existing_inputs_unchanged": true,
+  "file_sha256": {
+    "composition.csv": "374a7e01adf59d0724741121ceea09d434416530358107a6f62931471331dcfd",
+    "forecast.csv": "ef1348fd80a4d1e5bdc7d1b5c87567a94d367a50db91a9ec79210cd954eecc7e"
+  },
+  "model": {
+    "sha256": "64304a78c625b973058998f3a8f271a1d191efe650bb5e30b69123d7a97a081b",
+    "choice": "group_aligned"
+  }
+}

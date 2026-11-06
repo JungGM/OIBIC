@@ -1,0 +1,9 @@
+__pycache__/
+*.parquet
+*.npz
+*.npy
+*.pt
+*.ubj
+work/data/
+composition.csv
+forecast.csv
