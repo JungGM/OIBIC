@@ -1,0 +1,3 @@
+-r requirements.txt
+catboost==1.2.10
+pvlib==0.16.1

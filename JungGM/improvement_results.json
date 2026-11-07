@@ -1,0 +1,328 @@
+{
+  "experiment_dates_kst": [
+    "2026-11-02",
+    "2026-11-03"
+  ],
+  "decision": "improved_v8_officially_scored_team_best",
+  "official_score_20261102": 6441109123,
+  "new_server_submission": true,
+  "new_production_csv": true,
+  "production_candidates": [
+    "improved_v7",
+    "improved_v8"
+  ],
+  "preferred_candidate": "improved_v8",
+  "teammate_code_commits": [
+    "f33a5296f09f20e1dad4c66ab179973bbcbd8261",
+    "7b956c7"
+  ],
+  "experiments": [
+    {
+      "version": "v3",
+      "name": "cost_features_calibration",
+      "accepted": false,
+      "months": [
+        {
+          "month": 3,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 12972597.629118368,
+          "new_model_only_penalty_krw": 13327108.180621766,
+          "candidate_penalty_krw": 12972597.629118368,
+          "gain_pct": 0.0
+        },
+        {
+          "month": 4,
+          "hours": 713,
+          "sites": 253,
+          "baseline_penalty_krw": 17449032.11320479,
+          "new_model_only_penalty_krw": 17137890.386175197,
+          "candidate_penalty_krw": 17449032.11320479,
+          "gain_pct": 0.0
+        },
+        {
+          "month": 5,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 21525804.52708705,
+          "new_model_only_penalty_krw": 21287318.19680146,
+          "candidate_penalty_krw": 21525804.52708705,
+          "gain_pct": 0.0
+        }
+      ],
+      "gate": {
+        "accepted": false,
+        "improvement_fraction": 0.0,
+        "lower90_daily_saving_krw": 0.0,
+        "days": 30,
+        "block_days": 3
+      },
+      "new_model_weight": 0.0,
+      "seasonal_score": null,
+      "standalone_development_evaluated": true
+    },
+    {
+      "version": "v4",
+      "name": "seasonal_blend_group_search",
+      "accepted": false,
+      "months": [
+        {
+          "month": 3,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 12972597.62911837,
+          "model_only_penalty_krw": 12979508.28148884,
+          "candidate_penalty_krw": 12979508.28148884,
+          "gain_pct": -0.05327115330362453
+        },
+        {
+          "month": 4,
+          "hours": 713,
+          "sites": 253,
+          "baseline_penalty_krw": 17449032.11320479,
+          "model_only_penalty_krw": 17284387.746857073,
+          "candidate_penalty_krw": 17284387.746857073,
+          "gain_pct": 0.94357306055457
+        },
+        {
+          "month": 5,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 21525804.52708705,
+          "model_only_penalty_krw": 21347458.688582078,
+          "candidate_penalty_krw": 21347458.688582078,
+          "gain_pct": 0.8285211281211402
+        }
+      ],
+      "gate": {
+        "accepted": false,
+        "improvement_fraction": 0.009435730605545478,
+        "lower90_daily_saving_krw": -1160.0083625671027,
+        "days": 30,
+        "block_days": 3
+      },
+      "new_model_weight": 0.25,
+      "seasonal_score": 0.9982220299315991,
+      "standalone_development_evaluated": true
+    },
+    {
+      "version": "v5",
+      "name": "group_loss_boosting",
+      "accepted": false,
+      "months": [
+        {
+          "month": 3,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 12972597.629118368,
+          "candidate_penalty_krw": 12982797.546580268,
+          "new_model_only_penalty_krw": 13316311.885554496,
+          "gain_pct": -0.07862663865412234
+        },
+        {
+          "month": 4,
+          "hours": 713,
+          "sites": 253,
+          "baseline_penalty_krw": 17449032.11320479,
+          "candidate_penalty_krw": 17287625.043838054,
+          "new_model_only_penalty_krw": 17146547.531458154,
+          "gain_pct": 0.9250201863322149
+        },
+        {
+          "month": 5,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 21525804.52708705,
+          "candidate_penalty_krw": 21305805.057658322,
+          "new_model_only_penalty_krw": 21102500.454780325,
+          "gain_pct": 1.0220266989412252
+        }
+      ],
+      "gate": {
+        "accepted": false,
+        "improvement_fraction": 0.009250201863321927,
+        "lower90_daily_saving_krw": -1077.7949383000368,
+        "days": 30,
+        "block_days": 3
+      },
+      "new_model_weight": 0.25,
+      "seasonal_score": 0.9984689706961555,
+      "standalone_development_evaluated": true
+    },
+    {
+      "version": "v6",
+      "name": "compact_xgboost_reproduction",
+      "accepted": false,
+      "months": [
+        {
+          "month": 3,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 12972597.629118368,
+          "candidate_penalty_krw": 12440316.650373025,
+          "new_model_only_penalty_krw": 12480847.91594661,
+          "gain_pct": 4.103117925669586
+        },
+        {
+          "month": 4,
+          "hours": 713,
+          "sites": 253,
+          "baseline_penalty_krw": 17449032.11320479,
+          "candidate_penalty_krw": 18313847.70715133,
+          "new_model_only_penalty_krw": 18755786.88408065,
+          "gain_pct": -4.956238193246731
+        },
+        {
+          "month": 5,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 21525804.52708705,
+          "candidate_penalty_krw": 21751063.545841277,
+          "new_model_only_penalty_krw": 22068379.505079422,
+          "gain_pct": -1.046460393481552
+        }
+      ],
+      "gate": {
+        "accepted": false,
+        "improvement_fraction": -0.04956238193246709,
+        "lower90_daily_saving_krw": -53331.73908170273,
+        "days": 30,
+        "block_days": 3
+      },
+      "new_model_weight": 0.75,
+      "seasonal_score": 0.9675015501937865,
+      "standalone_development_evaluated": true
+    },
+    {
+      "version": "v7",
+      "name": "team_lightgbm_catboost_pair",
+      "accepted": true,
+      "months": [
+        {
+          "month": 3,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 12972597.629118368,
+          "candidate_penalty_krw": 12849913.778601075,
+          "new_model_only_penalty_krw": 13797288.894180246,
+          "gain_pct": 0.9457153765558557
+        },
+        {
+          "month": 4,
+          "hours": 713,
+          "sites": 253,
+          "baseline_penalty_krw": 17449032.11320479,
+          "candidate_penalty_krw": 15472152.648413623,
+          "new_model_only_penalty_krw": 15043482.576203877,
+          "gain_pct": 11.329450550412679
+        },
+        {
+          "month": 5,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 21525804.52708705,
+          "candidate_penalty_krw": 20935065.08707887,
+          "new_model_only_penalty_krw": 20986945.773596704,
+          "gain_pct": 2.744331526679167
+        }
+      ],
+      "gate": {
+        "accepted": true,
+        "improvement_fraction": 0.1132945055041269,
+        "lower90_daily_saving_krw": 16276.946303394598,
+        "days": 30,
+        "block_days": 3
+      },
+      "new_model_weight": 0.5,
+      "seasonal_score": 0.9896386402229231,
+      "standalone_development_evaluated": true
+    },
+    {
+      "version": "v8",
+      "name": "separate_component_ensemble",
+      "accepted": true,
+      "months": [
+        {
+          "month": 3,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 12972597.629118368,
+          "candidate_penalty_krw": 12830312.780291319,
+          "new_model_only_penalty_krw": 14649809.429859132,
+          "gain_pct": 1.096810776799828
+        },
+        {
+          "month": 4,
+          "hours": 713,
+          "sites": 253,
+          "baseline_penalty_krw": 17449032.11320479,
+          "candidate_penalty_krw": 16208952.293592561,
+          "new_model_only_penalty_krw": 15457201.130184002,
+          "gain_pct": 7.10686880261846
+        },
+        {
+          "month": 5,
+          "hours": 737,
+          "sites": 253,
+          "baseline_penalty_krw": 21525804.52708705,
+          "candidate_penalty_krw": 21033873.91600249,
+          "new_model_only_penalty_krw": 21023450.851005718,
+          "gain_pct": 2.285306504876694
+        }
+      ],
+      "gate": {
+        "accepted": true,
+        "improvement_fraction": 0.07106868802618438,
+        "lower90_daily_saving_krw": 13162.033842732017,
+        "days": 30,
+        "block_days": 3
+      },
+      "new_model_weight": 0.25,
+      "seasonal_score": 0.9883021783941595,
+      "standalone_development_evaluated": true,
+      "component_weights": {
+        "base": 0.75,
+        "lightgbm": 0.0,
+        "catboost": 0.25
+      }
+    }
+  ],
+  "pending_experiments": [],
+  "tests_passed": 31,
+  "audit": {
+    "passed": true,
+    "source_hashes_unchanged": true,
+    "first_official_submission_unchanged": true,
+    "original_truth_equal": true
+  },
+  "verified_development_models": 15,
+  "verified_production_models": 2,
+  "limits": [
+    "Repeated historical research, not untouched holdout or multiplicity-adjusted confidence",
+    "July-Dec selection uses fixed 225-site complete proxy; Jan-May comparisons use 253-site complete rows",
+    "Public teammate methods retrained at matched cutoffs; actual official teammate model binaries not verified"
+  ],
+  "official_evaluation": {
+    "candidate": "improved_v8",
+    "submission_number": 5,
+    "submitted_at_kst": "2026-11-03T22:32:35+09:00",
+    "submitter": "정기명",
+    "status": "scored",
+    "source_url": "https://dataen.ai/challenge/2026",
+    "daily_submissions_used": 2,
+    "total_submissions_used": 5,
+    "files": {
+      "composition.csv": "374a7e01adf59d0724741121ceea09d434416530358107a6f62931471331dcfd",
+      "forecast.csv": "35ff71e0be27abfe628edc6aea5ec125b5925a805920b5ff626f8fe7ccc68376"
+    },
+    "score_krw": 6445773032,
+    "total_submissions_remaining": 15,
+    "daily_submissions_remaining": 1,
+    "undergraduate_rank": 142,
+    "previous_team_best_krw": 6445688438,
+    "previous_own_score_krw": 6441109123,
+    "gain_vs_previous_team_best_krw": 84594,
+    "gain_vs_previous_own_krw": 4663909,
+    "leaderboard_updated_at_kst": "2026-11-03T22:33:51+09:00"
+  }
+}
